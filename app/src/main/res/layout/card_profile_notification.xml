@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.profile.noti.ProfileNotiCardViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:background="@color/colorLineLightGray">
+        </View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingBottom="14dp"
+            android:paddingStart="14dp"
+            android:paddingTop="16dp">
+
+            <ImageView
+                android:id="@+id/profileImageBelle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_mine_notification"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/profileImageBelle"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toEndOf="@id/profileImageBelle"
+                android:text="@string/notification"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_middle"/>
+
+            <View
+                android:id="@+id/sepLine"
+                style="@style/SepLine"
+                android:layout_below="@id/profileImageBelle"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sepLine"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp"
+                android:text="@string/no_notification"
+                android:textColor="@color/colorFontGray"
+                android:textSize="@dimen/text_size_small"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

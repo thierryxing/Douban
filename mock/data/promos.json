@@ -1,0 +1,48 @@
+{
+	"promos": [{
+		"notification": {
+			"count": 0,
+			"version": ""
+		},
+		"image": "https://img1.doubanio.com\/img\/files\/file-14990858447977.jpg",
+		"text": "",
+		"id": "3936",
+		"uri": "https:\/\/www.douban.com\/gallery\/topic\/%E3%80%8A%E6%B8%85%E7%99%BD%E4%B9%8B%E5%B9%B4%E3%80%8B%E6%95%85%E4%BA%8B%E5%BE%81%E9%9B%86\/?dt_banner_src=home_page"
+	}, {
+		"notification": {
+			"count": 0,
+			"version": ""
+		},
+		"image": "https://img3.doubanio.com\/img\/files\/file-14992250035070.jpg",
+		"text": "",
+		"id": "3950",
+		"uri": "https:\/\/m.douban.com\/page\/v66m3q0?dt_video_source=douban-app_home_banner&dt_banner_src=home_page"
+	}, {
+		"notification": {
+			"count": 0,
+			"version": ""
+		},
+		"image": "https://img3.doubanio.com\/img\/files\/file-14988201101095.jpg",
+		"text": "",
+		"id": "3926",
+		"uri": "https:\/\/market.douban.com\/book\/busiyi\/?utm_campaign=douban_frodo_home_top_banner&utm_source=douban&utm_medium=app&dt_banner_src=home_page"
+	}, {
+		"notification": {
+			"count": 0,
+			"version": ""
+		},
+		"image": "https://img1.doubanio.com\/img\/files\/file-14992357027979.jpg",
+		"text": "",
+		"id": "3951",
+		"uri": "https:\/\/m.douban.com\/page\/3zfj5of?dt_banner_src=home_page"
+	}, {
+		"notification": {
+			"count": 0,
+			"version": ""
+		},
+		"image": "https://img3.doubanio.com\/img\/files\/file-14991545316074.jpg",
+		"text": "",
+		"id": "3946",
+		"uri": "https:\/\/m.douban.com\/page\/ofoyrkz?dt_banner_src=home_page"
+	}]
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.home.FeedCardViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="16dp">
+
+            <RelativeLayout
+                android:id="@+id/feedCardTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:visibility="@{viewModel.topHidden() ? View.GONE : View.VISIBLE}">
+
+                <ImageView
+                    android:id="@+id/feedSourceImage"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@{viewModel.sourceImage()}"/>
+
+                <TextView
+                    android:id="@+id/feedSourceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toEndOf="@+id/feedSourceImage"
+                    android:text="@{viewModel.sourceText()}"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_small_11"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/feedCardContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:id="@+id/feedTitle"
+                    style="@style/CardFeedTitle"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignTop="@id/feedImage"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@id/feedImage"
+                    android:text="@{viewModel.title()}"/>
+
+                <ImageView
+                    android:id="@+id/feedImage"
+                    android:layout_width="@{viewModel.coverWidth(), default=wrap_content}"
+                    android:layout_height="@{viewModel.coverHeight(), default=wrap_content}"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    app:image="@{viewModel.coverUrl()}"/>
+
+                <TextView
+                    android:id="@+id/feedSummary"
+                    style="@style/CardFeedSummary"
+                    android:layout_alignEnd="@id/feedTitle"
+                    android:layout_alignStart="@id/feedTitle"
+                    android:layout_below="@id/feedTitle"
+                    android:maxLines="@{viewModel.summaryMaxLines()}"
+                    android:text="@{viewModel.summary()}"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/feedCardBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/feedAuthorImage"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    app:roundImage="@{viewModel.authorImageUrl()}"/>
+
+                <ImageView
+                    android:id="@+id/feedVerifyImage"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignBottom="@+id/feedAuthorImage"
+                    android:layout_alignEnd="@+id/feedAuthorImage"
+                    android:src="@drawable/ic_vip_official_small"
+                    android:visibility="@{viewModel.verifyImageHidden() ? View.GONE : View.VISIBLE}"/>
+
+                <TextView
+                    android:id="@+id/feedAuthorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/feedAuthorImage"
+                    android:text="@{viewModel.authorText()}"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_small_11"/>
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_feed_more"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View style="@style/SepView"></View>
+    </LinearLayout>
+</layout>

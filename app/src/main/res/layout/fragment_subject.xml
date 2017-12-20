@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.thierry.douban.module.subject.SubjectFragment">
+
+    <include
+        android:id="@+id/actionBar"
+        layout="@layout/action_bar_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/mSubjectTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionBar"
+        android:background="@color/colorWhite"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextAppearance="@style/SubjectTabText"
+        app:tabTextColor="@color/colorLightBlack">
+    </android.support.design.widget.TabLayout>
+
+    <View
+        android:id="@+id/subjectLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/mSubjectTabLayout"
+        android:background="@color/colorLineThinGray"/>
+
+    <FrameLayout
+        android:id="@+id/subjectContentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/subjectLine"/>
+
+</RelativeLayout>

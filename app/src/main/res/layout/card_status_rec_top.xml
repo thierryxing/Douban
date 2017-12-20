@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.status.recommend.card.StatusCardRecTopViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/colorBrown">
+
+        <ImageView
+            android:id="@+id/statusRecTop"
+            android:layout_width="92dp"
+            android:layout_height="78dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="45dp"
+            android:background="@drawable/ic_status_anonymous_header"/>
+
+        <TextView
+            android:id="@+id/statusRecTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/statusRecTop"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@+id/statusRecTop"
+            android:text="@string/status_rec_find_title"
+            android:textColor="@color/colorFontBlack"
+            android:textSize="@dimen/text_size_large"/>
+
+        <TextView
+            android:id="@+id/statusRecSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/statusRecTitle"
+            android:layout_below="@+id/statusRecTitle"
+            android:layout_marginTop="12dp"
+            android:text="@string/status_rec_find_summary"
+            android:textColor="@color/colorFontGray"
+            android:textSize="@dimen/text_size_small"/>
+
+
+    </RelativeLayout>
+</layout>

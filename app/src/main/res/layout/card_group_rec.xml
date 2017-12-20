@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.group.rec.GroupRecCardViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:background="@color/colorLineLightGray">
+        </View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:text="@string/group_rec"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_middle"/>
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="13dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_groups_more"/>
+        </RelativeLayout>
+
+        <View style="@style/SepThinLine"/>
+
+        <include layout="@layout/partial_recycler_view"/>
+
+    </LinearLayout>
+</layout>

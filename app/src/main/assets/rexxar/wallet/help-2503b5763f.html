@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <style>/*! normalize.css v3.0.1 | MIT License | git.io/normalize */html{font-family:Droid Sans,helvetica,sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}body{font-family:-apple-system,Droid Sans,PingFang SC,Helvetica,sans-serif;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}a{text-decoration:none;-webkit-touch-callout:none}ul{list-style:none}li,ul{margin:0;padding:0}html{background-color:#f7f7f7}a{color:#42bd56}._3mJqz{padding:0 15px;padding-top:1px;padding-bottom:25px;background-color:#fff}._2xAW1{margin-top:21px;line-height:30px;font-size:17px;font-weight:400}._2ERnq{line-height:17px;color:#42bd56;text-decoration:none;border:1px solid;padding:5px 10px;float:right;border-radius:3px;font-size:13px}._2X52t{font-size:15px;font-weight:400;margin:0}.t9TkT{line-height:15px;margin-left:13px;font-size:13px;margin-top:7px;padding-bottom:11px}</style>
+    <title>帮助</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      function showErrorMsg(msg, otherNode) {
+        if (document.getElementById('errorShowing')) return;
+        var errorNode = document.createElement('div');
+        errorNode.id = 'errorShowing';
+        errorNode.style.color = '#494949';
+        errorNode.style.textAlign = 'center';
+        errorNode.style.fontSize = '18px';
+        errorNode.style.margin = '200px 0 0';
+        var errorMsg = document.createElement('p');
+        errorMsg.appendChild(document.createTextNode(msg));
+        errorNode.appendChild(errorMsg);
+        if (otherNode && otherNode.nodeName) {
+          errorNode.appendChild(otherNode);
+        }
+        document.body.appendChild(errorNode);
+      }
+    </script>
+    <script>
+      function logSend(code) {
+        var ua = navigator.userAgent.toLowerCase();
+        var rexxarInfo = ua.match(/rexxar( |\/)([0-9.]*)/);
+        var rexxarVersion = rexxarInfo ? rexxarInfo.pop().split('.').slice(0, 3).join('.') : '';
+        var label = { msg: code };
+        var httpRequest = new XMLHttpRequest();
+        httpRequest.onreadystatechange = function() {
+          if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            if (httpRequest.status === 200) {}
+          }
+        }
+        if (/android/i.test(ua) && rexxarVersion >= '1.2.100') {
+          var url = 'http://rexxar-container/api/log?_rexxar_method=POST&event=rexxar_page_error&label='
+            + encodeURIComponent(JSON.stringify(label));
+          httpRequest.open('GET', url, true);
+          httpRequest.send();
+        } else {
+          httpRequest.open('POST', 'http://rexxar-container/api/log', true);
+          httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          httpRequest.send('event=rexxar_page_error&label=' + encodeURIComponent(JSON.stringify(label)));
+        }
+      }
+    </script>
+    <script>
+      window.onerror = function(errorMsg) {
+        var appNode = document.getElementById('app');
+        if (appNode.childNodes.length <= 0) {
+          var errorCode = document.createElement('div');
+          errorCode.style.fontSize = '14px';
+          errorCode.style.color = '#9b9b9b';
+          errorCode.style.margin = '12px';
+          errorCode.appendChild(document.createTextNode('展开详情'));
+          errorCode.addEventListener('click', function() {
+            this.innerText = errorMsg;
+          });
+          showErrorMsg('糟糕，页面出现了错误 :(', errorCode);
+        }
+        logSend(errorMsg);
+      }
+    </script>
+    <script>
+      window.Rexxar = window.Rexxar || {};
+      window.Rexxar.Lifecycle = window.Rexxar.Lifecycle || {};
+      window.Rexxar.Lifecycle.onPageVisible = function() {};
+      window.Rexxar.Lifecycle.onPageInvisible = function() {};
+    </script>
+    <script>
+      var ua = navigator.userAgent.toLowerCase();
+      var os;
+      if (/android/i.test(ua)) {
+        os = 'android';
+      } else if (/ipad|iphone|ipod/.test(ua)) {
+        os = 'ios';
+      } else {
+        os = 'web';
+      }
+      document.body.setAttribute('data-platform', os)
+    </script>
+    <script src="https://img3.doubanio.com/dae/rexxar/files/common/vendor-b22de54209.js"></script>
+    <script>
+      if (!window.VENDOR_START) {
+        logSend('Vendor assets failed to load.');
+        var reloadBtn = document.createElement('div');
+        reloadBtn.style.fontSize = '14px';
+        reloadBtn.style.color = '#494949';
+        reloadBtn.style.margin = '12px';
+        reloadBtn.appendChild(document.createTextNode('点击重试'));
+        reloadBtn.addEventListener('click', function() {
+          window.location.reload();
+        });
+        showErrorMsg("资源加载失败啦 :(", reloadBtn);
+      } else if (window.VENDOR_START && !window.VENDOR_END) {
+        logSend('Vendor assets load incomplete.');
+        var reloadBtn = document.createElement('div');
+        reloadBtn.style.fontSize = '14px';
+        reloadBtn.style.color = '#494949';
+        reloadBtn.style.margin = '12px';
+        reloadBtn.appendChild(document.createTextNode('点击重试'));
+        reloadBtn.addEventListener('click', function() {
+          window.location.reload();
+        });
+        showErrorMsg("资源加载失败啦 :(", reloadBtn);
+      }
+    </script>
+    <script>webpackJsonp([49],{0:function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}var a=n(1),o=r(a),u=n(4),i=r(u),l=n(3),c=r(l),f=n(600),d=r(f),s=n(2),p=r(s),m=n(26),_=r(m),g=n(9),h=n(10),v=function(e){function t(){return(0,o.default)(this,t),(0,i.default)(this,e.apply(this,arguments))}return(0,c.default)(t,e),t.prototype.render=function(){var e=void 0;return e="android"===g.OS?"douban://douban.com/feedback?qtype_id=152&qtype_title=钱包":h.frdVersion.since("4.12")?"douban://douban.com/feedback?qtype_id=153&qtype_title=钱包":"douban://douban.com/feedback_category?qtype_id=153&qtype_title=钱包",p.default.createElement("div",{className:d.default.wrap},p.default.createElement("h1",{className:d.default.wallet_header},"常见问题",p.default.createElement("a",{href:e,className:d.default.help},"我要提问")),p.default.createElement("h2",{className:d.default.wallet_h2},"1 豆瓣钱包里的零钱如何提现？"),p.default.createElement("p",{className:d.default.wallet_content},"请访问电脑版网页 ",p.default.createElement("a",{href:"https://www.douban.com/mine/wallet"},"我的钱包")," 修改提现信息，或者申请提现。"),p.default.createElement("h2",{className:d.default.wallet_h2},"2 如何修改我的提现信息？"),p.default.createElement("p",{className:d.default.wallet_content},"你可以在 ",p.default.createElement("a",{href:"douban://douban.com/mine/wallet"},"我的 - 钱包")," 看到你的赞赏支出和收入记录。"))},t}(p.default.Component);_.default.render(p.default.createElement(v,null),document.getElementById("app"))},6:function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}function a(e){return(0,h.default)(e).map(function(t){return encodeURIComponent(t)+"="+encodeURIComponent(e[t])}).join("&")}function o(e){return e?e.split("&").reduce(function(e,t){var n,r=t.split("="),a=r[0],o=r[1];return a=decodeURIComponent(a),o=decodeURIComponent(o),(0,_.default)({},e,(n={},n[a]=o,n))},{}):{}}function u(e){for(var t=e.split("."),n=window,r=0;r<t.length;r++){var a=t[r];n[a]=n[a]||{},n=n[a]}return n}function i(e){return Object.prototype.toString.call(e).slice(8,-1)}function l(e){if("string"==typeof e){var t=e;if(e=new Date(e.replace(/-/g,"/")).getTime()/1e3,isNaN(e))return t}var n=new Date,r=parseInt(n.getTime()/1e3,10),a=r-e,o=parseInt(a/86400,10),u=parseInt(a/3600,10),i=parseInt(a/60,10);if(o>0&&o<4)return o+"天前";if(o<=0&&u>0)return u+"小时前";if(u<=0&&i>0)return i+"分钟前";if(i<=0)return"刚刚";var l=new Date(1e3*e),c=l.getFullYear(),f="";return c!==n.getFullYear()&&(f=c+"年"),""+f+(l.getMonth()+1)+"月"+l.getDate()+"日"}function c(e,t){for(var n=e.split("."),r=t.split(".");n.length<r.length;)n.push("0");for(;r.length<n.length;)r.push("0");for(var a=0;a<n.length;a++)if(parseInt(n[a])!==parseInt(r[a])){if(parseInt(n[a])>parseInt(r[a]))return 1;if(parseInt(n[a])<parseInt(r[a]))return-1;throw new Error("Oops...Unbelievable error! We can only compare numerically!")}return 0}function f(e){var t={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"};return String(e).replace(/[&<>"']/g,function(e){return t[e]})}function d(e){var t=document.createElement("iframe");t.src=e,t.style.display="none",document.documentElement.appendChild(t),setTimeout(function(){return document.documentElement.removeChild(t)},0)}function s(e,t){var n=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;e=e.replace(n,function(e,t,n,r){return t+t+n+n+r+r});var r=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e),a=r?{r:parseInt(r[1],16),g:parseInt(r[2],16),b:parseInt(r[3],16)}:null,o=t?","+t:"";return"rgba("+a.r+","+a.g+","+a.b+o+")"}function p(e,t){return e?e.length<=t?e:e.substring(0,t-1)+"...":""}t.__esModule=!0;var m=n(12),_=r(m),g=n(27),h=r(g);t.obj2str=a,t.str2obj=o,t.namespace=u,t.getType=i,t.formatTime=l,t.vCompare=c,t.escapeHtml=f,t.callUri=d,t.hexToRgb=s,t.truncateString=p},9:function(e,t,n){"use strict";t.__esModule=!0;var r=t.STATUS={LOADING:"LOADING",SUCCESS:"SUCCESS",ERROR:"ERROR"},a=navigator.userAgent.toLowerCase(),o=/com\.douban\.(frodo|movie)/.test(a),u=void 0;u=/android/i.test(a)?"android":/ipad|iphone|ipod/.test(a)?"ios":"unknown";var i=t.IS_DOUBANAPP=o,l=t.OS=u,c="";c="https://frodo.douban.com";var f=t.API_PREFIX=c;t.default={STATUS:r,API_PREFIX:f,IS_DOUBANAPP:i,OS:l}},10:function(e,t,n){"use strict";function r(e){var t=new RegExp(e+"( |/)([0-9.]*)"),n=navigator.userAgent.match(t),r=n?n.pop().split(".").slice(0,3).join("."):"";return r}t.__esModule=!0,t.rxrVersion=t.frdVersion=void 0;var a=n(6),o=r("com\\.douban\\.frodo(\\.test)?"),u=r("rexxar"),i=function(e,t){if("String"!==(0,a.getType)(e))throw new Error("Version value expected a string");return 0===(0,a.vCompare)(e,t||"999")},l=function(e,t){if("String"!==(0,a.getType)(e))throw new Error("Version value expected a string");return 1!==(0,a.vCompare)(e,t||"999")},c={__str__:o},f={__str__:u};[c,f].forEach(function(e){e.getStr=function(){return e.__str__},e.is=function(t){return i(t,e.__str__)},e.since=function(t){return l(t,e.__str__)}}),t.frdVersion=c,t.rxrVersion=f},19:function(e,t,n){var r=n(31),a=n(5),o=n(78);e.exports=function(e,t){var n=(a.Object||{})[e]||Object[e],u={};u[e]=t(n),r(r.S+r.F*o(function(){n(1)}),"Object",u)}},27:function(e,t,n){e.exports={default:n(28),__esModule:!0}},28:function(e,t,n){n(29);var r=n(5).Object;e.exports=function(e){return r.getOwnPropertyNames(e)}},29:function(e,t,n){n(19)("getOwnPropertyNames",function(){return n(84).f})},600:function(e,t){e.exports={wrap:"_3mJqz",wallet_header:"_2xAW1",help:"_2ERnq",wallet_h2:"_2X52t",wallet_content:"t9TkT"}}});</script>
+  </body>
+</html>

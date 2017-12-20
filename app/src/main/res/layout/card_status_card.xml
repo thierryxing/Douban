@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.status.home.card.StatusCardCardViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/partial_status_card_top"
+            bind:viewModel="@{viewModel.topViewModel}"/>
+
+        <include
+            layout="@layout/partial_status_card_card"
+            bind:viewModel="@{viewModel}"/>
+
+        <View style="@style/SepThinLine"/>
+
+        <include
+            layout="@layout/partial_status_card_action"
+            bind:viewModel="@{viewModel.actionViewModel}"/>
+
+        <View style="@style/SepView"/>
+    </LinearLayout>
+</layout>

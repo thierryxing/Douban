@@ -1,0 +1,234 @@
+@charset"utf-8";
+
+/********************************/
+
+
+/********************************/
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+.invisible {
+    visibility: hidden;
+}
+/********************************/
+
+/* links */
+ a {
+    color: #3BA94D;
+    text-decoration: none;
+}
+
+/* del */
+ del {
+    text-decoration: line-through;
+}
+/* selection highlight */
+ ::selection {
+    background:#1cc4ad;
+    color:#ffffff;
+}
+/*  base styles */
+ html {
+    -webkit-tap-highlight-color: rgba(210, 210, 210, 0.4);
+}
+a:active {
+    background: #80cccccc;
+}
+html, body, p {
+    margin: 0;
+    padding: 0;
+}
+/********************************/
+ body {
+    background: #ffffff;
+    color: #000000;
+    overflow:auto;
+    overflow-x:hidden;
+}
+/********************************/
+
+/* app styles  */
+
+/********************************/
+#header {
+    margin: 1.5em 1em;
+}
+#title {
+    color:#1a1a1a;
+    font-size:150%;
+    font-weight: bold;
+}
+.info {
+    color:#8f8f8f;
+    font-size:75%;
+    padding: 0.5em 0;
+}
+
+.info > * {
+  vertical-align:middle;
+  display:inline;
+}
+
+.info a {
+    /*display: inline-block;*/
+    color: #0f9c89;
+    text-decoration: none;
+}
+
+#author {
+  margin-right:10px;
+}
+
+#author_avatar {
+  vertical-align:middle;
+  width: 32px;
+  height: 32px;
+  margin-right:8px;
+  border-radius:16px;
+}
+
+.editor_note {
+  padding-left:10px;
+  margin-top:20px;
+  color: #8f8f8f;
+  font-size: 100%;
+  border-left:#8f8f8f 2px solid;
+}
+
+.editor_note p {
+  display:inline;
+  line-height:150%;
+  color: #8f8f8f;
+  font-size: 90%;
+}
+
+#note_title{
+    font-weight: bold;
+}
+
+#content {
+    color: #4f4f4f;
+    font-size: 100%;
+    line-height: 160%;
+    /*letter-spacing: 50%;*/
+    word-wrap: break-word;
+    word-break:normal;
+    white-space: pre-wrap;
+    text-align:justify;
+    margin: 0 16px;
+}
+#content p {
+    margin: 1em auto;
+}
+#content .img_desc {
+    color: #999999;
+    font-size:75%;
+    line-height: 120%;
+    text-align: center;
+    margin-top: 0px;
+}
+#content .img_hr {
+    border:none;
+    border-bottom:1px solid #f0f0f0;
+    margin-bottom:1em;
+    margin-left:16px;
+    margin-right:16px;
+}
+.content_img {
+    /* center image */
+    margin:1em -16px;
+}
+.content_img img {
+    /* keep aspect ratio, use max width */
+    max-width: 90%;
+    height:auto;
+    display: block;
+    margin:auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.content_video {
+    margin: 1em -16px;
+}
+.content_video > div {
+    width: 90%;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.content_video video {
+    width: 100%;
+}
+.content_video > div > div {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+.content_video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.content_video .content_video_preview {
+    background-position: center;
+    background-size: cover;
+    background-color: #e0e0e0;
+}
+.content_video .content_video_control {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    background: url("file:///android_res/drawable/ic_play.png");
+    background-size: 100%;
+}
+#footer {
+    margin: 1.5em 1em;
+}
+
+#column-top {
+    font-size: 80%;
+    padding:0.2em 0.8em 0.2em 0.8em;
+    background:#f0f0f0;
+    display: inline-block;
+    color: #888888;
+    text-decoration: none;
+    margin-bottom: 15px
+}
+
+#column-bottom{
+    font-size: 80%;
+    padding:1em;
+    background:#f0f0f0;
+    display: block;
+    color: #888888;
+    text-decoration: none;
+    margin-bottom: 15px
+}
+
+#footer #original_url{
+    font-size: 80%;
+}
+
+#footer #copyright {
+    font-size: 80%;
+    color: #888888;
+}
+
+#action_bar {
+    width: 100%;
+    height: 0;
+}
+.bottomPadding {
+    padding: 1em 0;
+}

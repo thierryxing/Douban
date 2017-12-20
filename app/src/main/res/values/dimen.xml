@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tab_icon_size">30dp</dimen>
+    <dimen name="action_bar_height">57dp</dimen>
+
+    <dimen name="text_size_tiny_8">8sp</dimen>
+    <dimen name="text_size_tiny_9">9sp</dimen>
+    <dimen name="text_size_tiny">10sp</dimen>
+    <dimen name="text_size_small_11">11sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_middle">14sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_large_17">17sp</dimen>
+    <dimen name="text_size_huge_36">36sp</dimen>
+
+    <dimen name="feed_image_portrait_height">120dp</dimen>
+    <dimen name="feed_image_normal_height">90dp</dimen>
+    <dimen name="feed_image_normal_width">90dp</dimen>
+    <dimen name="feed_image_zero_width">0dp</dimen>
+
+    <dimen name="login_welcome_margin_top">70dp</dimen>
+</resources>

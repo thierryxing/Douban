@@ -1,0 +1,337 @@
+{
+  "items": [
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/account/suspicious_login-ad5e0cd57c.html",
+      "uri": "douban://douban.com/account/suspicious_login/\\d+[/]?",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/annoucements/annoucements-c57733319d.html",
+      "uri": "douban://douban.com/annoucements[/]?",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/author/authors-31b5a723a5.html",
+      "uri": "douban://douban.com/book/\\d+/authors[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/celebrity/works-1d32586ad7.html",
+      "uri": "douban://douban.com/celebrity/\\d+/works",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/celebrity/intro-5a5e178082.html",
+      "uri": "douban://douban.com/celebrity/\\d+/intro",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/celebrity/awards-bbf30a6948.html",
+      "uri": "douban://douban.com/celebrity/\\w+/awards[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/event/collection-626aa8889d.html",
+      "uri": "douban://douban.com/event/collection[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/fanta/questions-6e19e6a857.html",
+      "uri": "douban://douban.com/fanta/questions[/]?(\\?.*)?",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/feedback/feedback_category-7e6496aa36.html",
+      "uri": "douban://douban.com/feedback_category(\\?.*)?",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/gallery_topic/subscribed_topics-b05e8afcd3.html",
+      "uri": "douban://douban.com/user/\\w+/subscribed_gallery_topics[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/gallery_topic/home-86fe030bfa.html",
+      "uri": "douban://douban.com/gallery/home[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/group/rec_groups-39aac1605b.html",
+      "uri": "douban://douban.com/group/rec_groups/\\w+[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/group/rec_groups-39aac1605b.html",
+      "uri": "douban://douban.com/seti/user/\\w+/rec_groups$",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/niffler/explore-ae5ad18751.html",
+      "uri": "douban://douban.com/niffler/explore[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/niffler/subscriptions-6bae10069f.html",
+      "uri": "douban://douban.com/niffler/subscriptions[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/orders/orders-d8ec77761e.html",
+      "uri": "douban://douban.com/orders[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/related_doulists/related_doulists-eade68dfc2.html",
+      "uri": "douban://douban.com/(tag|tv|movie|book|music|drama)/(\\w+)/related_doulists[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/rexxar/demo-98c8ba9f95.html",
+      "uri": "douban://douban.com/rexxar_demo[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/selection/columns-cfa31a34be.html",
+      "uri": "douban://douban.com/selection/columns[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/selection/themes-b4925f2e43.html",
+      "uri": "douban://douban.com/selection/themes[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject/best_reviews-60ac03a1c0.html",
+      "uri": "douban://douban.com/(movie|tv|book|music)/best_reviews[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject/suggestion-17c08e73bd.html",
+      "uri": "douban://douban.com/(movie|tv|book|music)/suggestion[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject/book_douban_vendor-23d46d2682.html",
+      "uri": "douban://douban.com/book/\\d+/douban_vendor[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject/industry_news-9ee47c1cb0.html",
+      "uri": "douban://douban.com/(book|music)/industry_news[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject/recommend_celebrities-0501dac7c1.html",
+      "uri": "douban://douban.com/(movie|tv)/rec_celebrities[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject_collection/subject_collection-bf2a18be1a.html",
+      "uri": "douban://douban.com/subject_collection/((?!movie_showing|movie_soon)\\w+)[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject_collection_boards/subject_collection_boards-dbf8249db2.html",
+      "uri": "douban://douban.com/tag/(\\w+)/subject_collection_boards[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject_interaction/subject_interaction-324dd70ddd.html",
+      "uri": "douban://douban.com/subject_interaction/(movie|book|music|tv|event|game|app)/(\\d+)[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/tag/tag-f55de8c963.html",
+      "uri": "douban://douban.com/tag/\\w+$",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/tag/related_articles-72829bb4d6.html",
+      "uri": "douban://douban.com/tag/\\w+/related_articles[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/tag/related_groups-ad9e7942f1.html",
+      "uri": "douban://douban.com/tag/\\w+/related_groups[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/tag/related_group_chats-a5ddfed561.html",
+      "uri": "douban://douban.com/tag/\\w+/related_group_chats[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/user/works-ced128633a.html",
+      "uri": "douban://douban.com/user/\\w+/works[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/wallet/help-2503b5763f.html",
+      "uri": "douban://douban.com/wallet/help[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/market/market-2f11506c56.html",
+      "uri": "douban://douban.com/market/homepage[/]?.*",
+      "discard_version": null
+    }
+  ],
+  "partial_items": [
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/article/note-7ad1f4458b.html",
+      "uri": "douban://partial.douban.com/note/\\w+/_content[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/article/review-b97c2a9b4d.html",
+      "uri": "douban://partial.douban.com/review/\\w+/_content[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/article/annotation-4bbb3c9227.html",
+      "uri": "douban://partial.douban.com/annotation/\\w+/_content[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/author/authors-31b5a723a5.html",
+      "uri": "douban://partial.douban.com/book/\\d+/author_intro/_content",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/event/event-d10b63e7c3.html",
+      "uri": "douban://partial.douban.com/event/\\w+/_content[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/fanta/question-2ea51fdf8a.html",
+      "uri": "douban://partial.douban.com/fanta/question/\\w+/_content/?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/feedback/feedback-f7169d501c.html",
+      "uri": "douban://partial.douban.com/feedback(\\?.*)?",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/gallery_topic/column-cd80affbaf.html",
+      "uri": "douban://partial.douban.com/gallery/explore/_content[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/group/topic-cdd5f9c100.html",
+      "uri": "douban://partial.douban.com/group/topic/\\w+/_content[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Thu, 22 Jun 2017 06:34:25 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/market/market-36860fe222.html",
+      "uri": "douban://partial.douban.com/subject/_market",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/niffler/article-7e13e63b2e.html",
+      "uri": "douban://partial.douban.com/niffler/article/\\w+/_content/?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/niffler/column-8081613f1b.html",
+      "uri": "douban://partial.douban.com/niffler/column/\\w+/_content/?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/rexxar/demo-98c8ba9f95.html",
+      "uri": "douban://partial.douban.com/rexxar_demo/_.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject/subject-3e5e682083.html",
+      "uri": "douban://partial.douban.com/subject/_(subject|movie|book|tv|event|music)",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject/subject_info-b7600ae547.html",
+      "uri": "douban://partial.douban.com/(movie|book|tv|music|game|app|drama)/\\d+/info/_content",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject/book_catalog-bce4023911.html",
+      "uri": "douban://partial.douban.com/book/\\d+/catalog/_content",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject/drama_versions-60baa54f90.html",
+      "uri": "douban://partial.douban.com/drama/\\d+/versions/_content",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject/forum_topic-04b80aea14.html",
+      "uri": "douban://partial.douban.com/forum_topic/\\w+/_content[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/market/market-2f11506c56.html",
+      "uri": "douban://partial.douban.com/subject/_market[/]?.*",
+      "discard_version": null
+    },
+    {
+      "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT",
+      "remote_file": "https://img3.doubanio.com/dae/rexxar/files/subject/book_douban_vendor-23d46d2682.html",
+      "uri": "douban://partial.douban.com/book/\\d+/douban_vendor[/]?.*",
+      "discard_version": null
+    }
+  ],
+  "deploy_time": "Fri, 30 Jun 2017 09:47:50 GMT"
+}

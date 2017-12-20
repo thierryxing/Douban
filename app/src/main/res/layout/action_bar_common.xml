@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.home.target.FeedTargetViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_height"
+            android:background="@color/colorWhite">
+
+            <ImageButton
+                android:id="@+id/actionBarBackBtn"
+                style="@style/ActionBarBtnM"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/ic_bar_back_green"/>
+
+            <TextView
+                android:id="@+id/actionBarTitle"
+                style="@style/ActionBarTitle"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_toEndOf="@id/actionBarBackBtn"
+                android:layout_toStartOf="@id/actionBarDonateWrapper"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/actionBarBottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLineGray"/>
+    </LinearLayout>
+</layout>

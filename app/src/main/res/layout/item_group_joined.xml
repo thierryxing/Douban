@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.group.joined.GroupJoinedItemViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+        <ImageView
+            android:id="@+id/joinedImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:image="@{viewModel.imageUrl}"/>
+
+        <TextView
+            android:id="@+id/joinedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/joinedImage"
+            android:text="@{viewModel.titleText}"
+            android:textColor="@color/colorFontBlack"
+            android:textSize="@dimen/text_size_middle"/>
+
+        <TextView
+            android:id="@+id/joinedUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_group_update_text"
+            android:gravity="center"
+            android:text="@{viewModel.updateText}"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_tiny"
+            android:visibility="@{viewModel.updateText.isEmpty ? View.GONE : View.VISIBLE}"/>
+
+        <View
+            style="@style/SepLine"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+</layout>

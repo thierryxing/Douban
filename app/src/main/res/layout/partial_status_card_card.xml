@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.status.home.card.StatusCardCardViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/colorBgGray"
+        android:paddingBottom="14dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="14dp">
+
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:image="@{viewModel.imageUrl}"/>
+
+        <TextView
+            android:id="@+id/cardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/cardImage"
+            android:lines="1"
+            android:text="@{viewModel.titleText}"
+            android:textColor="@color/colorFontBlack"
+            android:textSize="@dimen/text_size_middle"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/cardStar"
+            android:layout_width="58dp"
+            android:layout_height="10dp"
+            android:layout_alignStart="@id/cardTitle"
+            android:layout_below="@id/cardTitle"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/ic_star"/>
+
+        <TextView
+            android:id="@+id/cardRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/cardStar"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/cardStar"
+            android:maxLines="1"
+            android:text="@{viewModel.ratingText}"
+            android:textColor="@color/colorFontGray"
+            android:textSize="@dimen/text_size_tiny_8"/>
+
+        <TextView
+            android:id="@+id/cardSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/cardTitle"
+            android:layout_below="@+id/cardRating"
+            android:layout_marginTop="6dp"
+            android:maxLines="2"
+            android:text="@{viewModel.subTitleText}"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/text_size_small_11"/>
+    </RelativeLayout>
+</layout>

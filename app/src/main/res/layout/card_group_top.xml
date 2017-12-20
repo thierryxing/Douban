@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.group.top.GroupTopCardViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <include
+                layout="@layout/item_group_top"
+                app:image="@{viewModel.image(0)}"
+                app:title="@{viewModel.title(0)}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <include
+                layout="@layout/item_group_top"
+                app:image="@{viewModel.image(1)}"
+                app:title="@{viewModel.title(1)}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <include
+                layout="@layout/item_group_top"
+                app:image="@{viewModel.image(2)}"
+                app:title="@{viewModel.title(2)}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <include
+                layout="@layout/item_group_top"
+                app:image="@{viewModel.image(3)}"
+                app:title="@{viewModel.title(3)}"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

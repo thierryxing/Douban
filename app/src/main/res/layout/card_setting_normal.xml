@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.profile.setting.SettingCardViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            style="@style/SepView"
+            android:visibility="@{viewModel.isFirstElement ? View.VISIBLE : View.GONE}"/>
+
+        <View
+            style="@style/SepThinLine"
+            android:visibility="@{!viewModel.isFirstElement ? View.VISIBLE : View.GONE}"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/settingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:text="@{viewModel.titleText}"
+                android:textColor="@color/colorFontBlack"
+                android:textSize="@dimen/text_size_middle"/>
+
+            <TextView
+                android:id="@+id/settingSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:layout_toLeftOf="@id/settingArrow"
+                android:text="@{viewModel.subTitleText}"
+                android:textColor="@color/colorFontGray"
+                android:textSize="@dimen/text_size_small"/>
+
+            <ImageView
+                android:id="@+id/settingArrow"
+                android:layout_width="7dp"
+                android:layout_height="12dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_seti_arrow_right_gray"
+                android:visibility="@{viewModel.showRightArrow ? View.VISIBLE : View.GONE}"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

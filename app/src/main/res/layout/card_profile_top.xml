@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.profile.top.ProfileTopCardViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_my_default_male_bg"
+        android:paddingBottom="27dp"
+        android:paddingEnd="0dp"
+        android:paddingStart="27dp"
+        android:paddingTop="27dp">
+
+        <ImageView
+            android:id="@+id/profileAvatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:roundImage="@{viewModel.avatarUrl}"/>
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/profileAvatar"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@id/profileAvatar"
+            android:text="@{viewModel.profileNameText}"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_large_17"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="12dp"
+            android:layout_alignBottom="@id/profileName"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/profileName"
+            android:src="@drawable/ic_mine_male"/>
+
+        <TextView
+            android:id="@+id/profileID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/profileName"
+            android:layout_below="@id/profileName"
+            android:layout_marginTop="9dp"
+            android:text="@{viewModel.profileIDText}"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_tiny"/>
+
+        <View
+            android:id="@+id/profileLine"
+            style="@style/SepLineBlue"
+            android:layout_alignStart="@id/profileName"
+            android:layout_below="@id/profileID"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/profileFollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/profileName"
+            android:layout_below="@id/profileID"
+            android:layout_marginTop="24dp"
+            android:text="@{viewModel.profileFollowingText}"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_small"/>
+
+        <TextView
+            android:id="@+id/profileFollowed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/profileFollowing"
+            android:layout_below="@id/profileID"
+            android:layout_marginStart="24dp"
+            android:layout_toEndOf="@id/profileFollowing"
+            android:text="@{viewModel.profileFollowedText}"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_small"/>
+
+        <TextView
+            android:id="@+id/profileHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp"
+            android:layout_toStartOf="@id/profileArrow"
+            android:text="@string/my_home_page"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_small"/>
+
+        <ImageView
+            android:id="@+id/profileArrow"
+            android:layout_width="7dp"
+            android:layout_height="12dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_arrow_white_35"/>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.profile.menu.ProfileMenuItemViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="106dp">
+
+        <ImageView
+            android:id="@+id/menuImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitCenter"
+            android:src="@{viewModel.menuImage}"/>
+
+        <TextView
+            android:id="@+id/menuTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menuImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:text="@{viewModel.menuTitleText}"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_small"/>
+
+        <View
+            style="@style/SepLine"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,23 @@
+{
+  "name": "douban",
+  "version": "1.0.0",
+  "description": "Douban Mock Server",
+  "author": "Thierry <thierry.xing@gmail.com>",
+  "private": true,
+  "scripts": {
+    "mock": "node server.js"
+  },
+  "devDependencies": {
+	"json-server": "^0.10.3",
+	"underscore": "^1.8.3"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

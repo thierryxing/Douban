@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.home.target.FeedTargetViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_height"
+            android:background="@color/colorWhite">
+
+            <ImageButton
+                android:id="@+id/actionBarBackBtn"
+                style="@style/ActionBarBtnM"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/ic_bar_back_green"/>
+
+            <TextView
+                android:id="@+id/actionBarTitle"
+                style="@style/ActionBarTitle"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_toEndOf="@id/actionBarBackBtn"
+                android:layout_toStartOf="@id/actionBarDonateWrapper"
+                android:text="@{viewModel.titleText}"/>
+
+            <RelativeLayout
+                android:id="@+id/actionBarDonateWrapper"
+                style="@style/ActionBarBtnWrapper"
+                android:layout_toStartOf="@id/actionBarLikeWrapper"
+                android:visibility="@{viewModel.donateWrapperVisible ? View.VISIBLE : View.GONE}">
+
+                <ImageButton
+                    android:id="@+id/actionBarDonateBtn"
+                    style="@style/ActionBarBtnM"
+                    android:background="@drawable/ic_menu_donate_green"/>
+
+                <TextView
+                    android:id="@+id/actionBarDonateText"
+                    style="@style/ActionBarBtnText"
+                    android:layout_above="@id/actionBarDonateBtn"
+                    android:layout_toEndOf="@id/actionBarDonateBtn"
+                    android:text="@{viewModel.donateText}"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/actionBarLikeWrapper"
+                style="@style/ActionBarBtnWrapper"
+                android:layout_toStartOf="@id/actionBarCommentWrapper"
+                android:visibility="@{viewModel.likeWrapperVisible ? View.VISIBLE : View.GONE}">
+
+                <ImageButton
+                    android:id="@+id/actionBarLikeBtn"
+                    style="@style/ActionBarBtnM"
+                    android:background="@drawable/ic_menu_like"/>
+
+                <TextView
+                    android:id="@+id/actionBarLikeText"
+                    style="@style/ActionBarBtnText"
+                    android:layout_above="@id/actionBarLikeBtn"
+                    android:layout_toEndOf="@id/actionBarLikeBtn"
+                    android:text="@{viewModel.likeText}"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/actionBarCommentWrapper"
+                style="@style/ActionBarBtnWrapper"
+                android:layout_toStartOf="@id/actionBarShareBtn"
+                android:visibility="@{viewModel.commentWrapperVisible ? View.VISIBLE : View.GONE}">
+
+                <ImageButton
+                    android:id="@+id/actionBarCommentBtn"
+                    style="@style/ActionBarBtnM"
+                    android:background="@drawable/ic_menu_reply"/>
+
+                <TextView
+                    android:id="@+id/actionBarCommentText"
+                    style="@style/ActionBarBtnText"
+                    android:layout_above="@id/actionBarCommentBtn"
+                    android:layout_toEndOf="@id/actionBarCommentBtn"
+                    android:text="@{viewModel.commentText}"/>
+            </RelativeLayout>
+
+
+            <ImageButton
+                android:id="@+id/actionBarShareBtn"
+                style="@style/ActionBarBtnM"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/ic_action_share_green"/>
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLineGray"/>
+    </LinearLayout>
+</layout>

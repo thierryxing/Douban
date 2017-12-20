@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.account.LoginViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <RelativeLayout
+            android:id="@+id/loginWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/actionBar">
+
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/login_welcome_margin_top"
+                android:text="@string/login_welcome"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_huge_36"/>
+
+            <EditText
+                android:id="@+id/usernameText"
+                style="@style/LoginEditText"
+                android:layout_below="@id/welcomeText"
+                android:layout_marginTop="70dp"
+                android:hint="@string/login_username_hint"
+                android:text="13718896117"/>
+
+            <EditText
+                android:id="@+id/passwordText"
+                style="@style/LoginEditText"
+                android:layout_below="@id/usernameText"
+                android:layout_marginTop="40dp"
+                android:hint="@string/login_password_hint"
+                android:inputType="textPassword"
+                android:text="19854186xing"/>
+
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/passwordText"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/bg_round_green_solid_button"
+                android:stateListAnimator="@null"
+                android:text="@string/login"
+                android:textColor="@color/colorWhite"/>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/actionBar"
+            layout="@layout/action_bar_common"/>
+    </RelativeLayout>
+</layout>

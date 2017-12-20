@@ -1,0 +1,143 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTitleSize">0dp</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+    </style>
+
+    <style name="SubjectTabText">
+        <item name="android:textSize">@dimen/text_size_middle</item>
+    </style>
+
+    <style name="SepLine">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorLineGray</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="SepLineBlue">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorLineThinBlue</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="SepThinLine">
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/colorLineLightGray</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="SepView">
+        <item name="android:layout_height">14dp</item>
+        <item name="android:background">@color/colorLineLightGray</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!-- Action Bar -->
+    <style name="SearchEditText">
+        <item name="android:textSize">@dimen/text_size_middle</item>
+        <item name="android:textColor">@color/colorGray</item>
+    </style>
+
+    <style name="ActionBarBtn">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="ActionBarBtnM" parent="ActionBarBtn">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+
+    <style name="ActionBarBtnL" parent="ActionBarBtn">
+        <item name="android:layout_width">28dp</item>
+        <item name="android:layout_height">28dp</item>
+    </style>
+
+    <style name="ActionBarTitle">
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="ActionBarBtnWrapper">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginEnd">20dp</item>
+    </style>
+
+    <style name="ActionBarBtnText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_tiny</item>
+        <item name="android:layout_marginBottom">-3dp</item>
+    </style>
+
+    <!-- Card Home Feed -->
+    <style name="CardFeedTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/colorFontBlack</item>
+    </style>
+
+    <style name="CardFeedSummary">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/colorFontGray</item>
+    </style>
+
+    <style name="CardFeedAuthor">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/text_size_small_11</item>
+        <item name="android:textColor">@color/colorFontLightGray</item>
+    </style>
+
+    <style name="CardFeedFrom">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/colorFontLightGray</item>
+    </style>
+
+    <!-- Status Home Feed -->
+    <style name="StatusActionBtn">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <!-- Login -->
+    <style name="LoginEditText">
+        <item name="android:textCursorDrawable">@drawable/bg_cursor_green</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:textColor">@color/colorFontBlack</item>
+        <item name="android:textColorHint">@color/colorFontLightGray</item>
+        <item name="android:textSize">@dimen/text_size_middle</item>
+        <item name="android:background">@drawable/border_gray</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">5dp</item>
+    </style>
+</resources>

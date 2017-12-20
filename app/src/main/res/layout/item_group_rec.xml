@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.group.rec.GroupRecItemViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="110dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/recImage"
+            android:layout_width="190dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            app:image="@{viewModel.imageUrl}"/>
+
+    </RelativeLayout>
+</layout>

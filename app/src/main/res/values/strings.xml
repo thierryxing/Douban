@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">DouBan</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_search_hit">影视 图书 唱片 小组 舞台剧等</string>
+
+    <string name="group_rec">精选小组</string>
+    <string name="group_joined">我常去的</string>
+    <string name="group_my">我的小组</string>
+
+    <string name="my_home_page">个人主页</string>
+    <string name="notification">提醒</string>
+    <string name="no_notification">暂无新提醒</string>
+
+    <string name="status_share_life">分享生活点滴...</string>
+    <string name="status_find">关注更多的人，丰富你的广播动态</string>
+    <string name="status_find_more">发现更多</string>
+    <string name="status_rec_find_title">发现有趣的人</string>
+    <string name="status_rec_find_summary">关注他们，发现更大的世界</string>
+    <string name="follow">关注</string>
+
+    <string name="login_welcome">欢迎来到豆瓣</string>
+    <string name="login">登录</string>
+    <string name="login_username_hint">手机号/邮箱</string>
+    <string name="login_password_hint">密码</string>
+</resources>

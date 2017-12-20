@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.thierry.douban.module.status.home.card.StatusCardTopViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="18dp">
+
+        <ImageView
+            android:id="@+id/statusAuthorAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:roundImage="@{viewModel.authorAvatarUrl}"/>
+
+        <TextView
+            android:id="@+id/statusAuthorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/statusAuthorAvatar"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/statusAuthorAvatar"
+            android:text="@{viewModel.authorNameText}"
+            android:textColor="@color/colorFontDark"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/statusActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/statusAuthorName"
+            android:layout_below="@id/statusAuthorName"
+            android:layout_marginTop="5dp"
+            android:text="@{viewModel.activityText}"
+            android:textColor="@color/colorFontGray"
+            android:textSize="@dimen/text_size_small"/>
+
+        <TextView
+            android:id="@+id/statusTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_toLeftOf="@id/statusMore"
+            android:text="@{viewModel.createTimeText}"
+            android:textColor="@color/colorFontGray"
+            android:textSize="@dimen/text_size_tiny"/>
+
+        <ImageButton
+            android:id="@+id/statusMore"
+            android:layout_width="12dp"
+            android:layout_height="3dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_more_action_overflow"/>
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/statusAuthorAvatar"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.statusText}"
+            android:textColor="@color/colorFontBlack"
+            android:textSize="@dimen/text_size_middle"
+            android:visibility="@{viewModel.textHidden ? View.GONE : View.VISIBLE}"/>
+    </RelativeLayout>
+</layout>
