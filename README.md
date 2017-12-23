@@ -8,7 +8,7 @@
 
 ## 功能及开发模式
 * 包含登录，及5个一级页面，及二级内容详情页
-* 包含豆瓣Hybrid框架(https://github.com/douban/rexxar-android)[Rexxar]的使用：一个通用的RexxarPartialFragment
+* 包含豆瓣Hybrid框架[Rexxar](https://github.com/douban/rexxar-android)的使用：一个通用的RexxarPartialFragment
 * 包含一个通用的RecycleView组件RecyclerFragment及通用Feed流适配器CardAdapter
 * 采用Databinding+MVVM模式
 
