@@ -23,89 +23,101 @@
 
 ```
 .
-├── App.vue
-├── assets
-│   └── logo.png
-├── components
-│   ├── dashboard
-│   │   ├── Aggregate.vue
-│   │   └── WeeklyChart.vue
-│   ├── global
-│   │   ├── Alert.vue
-│   │   ├── ConfirmModal.vue
-│   │   ├── ContentFooter.vue
-│   │   ├── ContentHeader.vue
-│   │   ├── LoadingOverlay.vue
-│   │   ├── NavBar.vue
-│   │   ├── Pagination.vue
-│   │   ├── SideBar.vue
-│   │   ├── SideBarItem.vue
-│   │   ├── TableBox.vue
-│   │   └── UserPanel.vue
-│   └── projects
-│       ├── Dependency.vue
-│       ├── EnvForm.vue
-│       ├── Form.vue
-│       ├── Info.vue
-│       └── SideBar.vue
-├── constants
-│   ├── api.js
-│   └── enum.js
-├── main.js
-├── router
-│   ├── index.js
-│   └── routes.js
-├── store
-│   ├── actions.js
-│   ├── index.js
-│   ├── modules
-│   │   ├── alert.js
-│   │   ├── current-platform.js
-│   │   ├── current-project.js
-│   │   └── current-user.js
-│   └── mutation-types.js
-├── utils
-│   ├── networking.js
-│   └── storage.js
-└── views
-    ├── Layout.vue
-    ├── account
-    │   └── Login.vue
-    ├── activity
-    │   └── List.vue
-    ├── dashboard
-    │   └── List.vue
-    ├── jobs
-    │   └── Index.vue
-    ├── members
-    │   └── List.vue
-    └── projects
-        ├── Edit.vue
-        ├── Home.vue
-        ├── Layout.vue
-        ├── List.vue
-        ├── New.vue
-        ├── builds
-        │   ├── Detail.vue
-        │   ├── List.vue
-        │   ├── PreBuildBeta.vue
-        │   ├── PreBuildLib.vue
-        │   ├── PreBuildProd.vue
-        │   └── PreBuildTest.vue
-        ├── environments
-        │   ├── Clone.vue
-        │   ├── List.vue
-        │   ├── New.vue
-        │   └── configs
-        │       ├── Fastlane.vue
-        │       ├── GitClone.vue
-        │       ├── Info.vue
-        │       └── List.vue
-        └── services
-            ├── Edit.vue
-            └── List.vue
+├── App.kt
+├── component
+│   ├── CardAdapter.kt
+│   ├── CardViewModel.kt
+│   ├── RecyclerFragment.kt
+│   ├── RecyclerViewModel.kt
+│   └── RexxarPartialFragment.kt
+├── extension
+│   ├── FragmentExtension.kt
+│   └── ImageViewExtension.kt
+├── model
+│   ├── BaseModel.kt
+│   ├── Card.kt
+│   ├── Feed.kt
+│   ├── Group.kt
+│   ├── LoginUser.kt
+│   ├── Note.kt
+│   ├── Promo.kt
+│   ├── SettingItem.kt
+│   ├── SimpleItem.kt
+│   ├── Timeline.kt
+│   └── User.kt
+├── module
+│   ├── TabActivity.kt
+│   ├── TabViewModel.kt
+│   ├── account
+│   │   ├── LoginActivity.kt
+│   │   └── LoginViewModel.kt
+│   ├── common
+│   │   ├── BaseActivity.kt
+│   │   ├── BaseFragment.kt
+│   │   ├── BaseViewModel.kt
+│   │   └── FetchDataViewModel.kt
+│   ├── group
+│   │   ├── GroupFragment.kt
+│   │   ├── GroupViewModel.kt
+│   │   ├── joined
+│   │   │   ├── GroupJoinedCardViewModel.kt
+│   │   │   └── GroupJoinedItemViewModel.kt
+│   │   ├── rec
+│   │   │   ├── GroupRecCardViewModel.kt
+│   │   │   └── GroupRecItemViewModel.kt
+│   │   └── top
+│   │       └── GroupTopCardViewModel.kt
+│   ├── home
+│   │   ├── FeedCardViewModel.kt
+│   │   ├── FeedFragment.kt
+│   │   ├── FeedViewModel.kt
+│   │   └── target
+│   │       ├── FeedTargetActivity.kt
+│   │       └── FeedTargetViewModel.kt
+│   ├── profile
+│   │   ├── ProfileFragment.kt
+│   │   ├── ProfileViewModel.kt
+│   │   ├── menu
+│   │   │   ├── ProfileMenuCardViewModel.kt
+│   │   │   └── ProfileMenuItemViewModel.kt
+│   │   ├── noti
+│   │   │   └── ProfileNotiCardViewModel.kt
+│   │   ├── setting
+│   │   │   ├── SettingActivity.kt
+│   │   │   ├── SettingCardViewModel.kt
+│   │   │   └── SettingViewModel.kt
+│   │   └── top
+│   │       └── ProfileTopCardViewModel.kt
+│   ├── status
+│   │   ├── home
+│   │   │   ├── StatusFragment.kt
+│   │   │   ├── StatusViewModel.kt
+│   │   │   └── card
+│   │   │       ├── StatusCardActionViewModel.kt
+│   │   │       ├── StatusCardCardViewModel.kt
+│   │   │       ├── StatusCardFindViewModel.kt
+│   │   │       ├── StatusCardNormalViewModel.kt
+│   │   │       └── StatusCardTopViewModel.kt
+│   │   └── recommend
+│   │       ├── RecommendStatusFragment.kt
+│   │       ├── RecommendStatusViewModel.kt
+│   │       └── card
+│   │           ├── StatusCardRecTopViewModel.kt
+│   │           └── StatusCardRecViewModel.kt
+│   └── subject
+│       ├── SubjectFragment.kt
+│       └── SubjectViewModel.kt
+├── service
+│   ├── NetService.kt
+│   └── UserService.kt
+└── util
+    ├── BindAdapter.kt
+    ├── Constants.kt
+    ├── Enum.kt
+    ├── ResUtils.kt
+    └── VersionUtils.kt
 
-21 directories, 60 files
+25 directories, 68 files
 ```
 
 ## License
