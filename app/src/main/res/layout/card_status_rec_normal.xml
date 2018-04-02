@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        card_view:cardBackgroundColor="@android:color/black"
+        card_view:cardBackgroundColor="@color/colorWhite"
         card_view:cardCornerRadius="10dp">
 
         <RelativeLayout

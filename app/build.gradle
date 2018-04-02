@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     dataBinding {
@@ -20,8 +19,11 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+        }
+        release {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -41,10 +43,10 @@ dependencies {
     implementation "com.android.support:design:$android_support_version"
 
     //Pleasant Android application development
-    implementation 'org.jetbrains.anko:anko:0.10.1'
+    implementation 'org.jetbrains.anko:anko:0.10.4'
 
     //The easiest HTTP networking library for Kotlin/Android
-    implementation 'com.github.kittinunf.fuel:fuel-android:1.8.0'
+    implementation 'com.github.kittinunf.fuel:fuel-android:1.12.1'
 
     // Gson for Kotlin
     implementation "com.github.salomonbrys.kotson:kotson:2.5.0"
@@ -62,7 +64,7 @@ dependencies {
     implementation "net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.1.0"
 
     // Douban Rexxar
-    implementation "com.douban.rexxar:core:0.3.3"
+    implementation "com.douban.rexxar:core:0.4.6"
 
     // DataBinding
     kapt 'com.android.databinding:compiler:2.3.0'

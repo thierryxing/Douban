@@ -38,8 +38,8 @@ object Constants {
     object Rexxar {
         val Api = "douban://douban.com"
         val PartialApi = "douban://partial.douban.com"
-        val RouteApi = "https://raw.githubusercontent.com/thierryxing/DBTest/master/app/src/main/assets/rexxar/routes.json"
-        val ProxyHosts = listOf("raw.githubusercontent.com")
+        val RouteApi = "https://frodo.douban.com/frodo_rexxar/api/routes"
+        val ProxyHosts = listOf(Host)
     }
 
     object Broadcast {

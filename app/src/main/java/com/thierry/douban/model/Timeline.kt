@@ -1,8 +1,5 @@
 package com.thierry.douban.model
 
-import android.text.Html
-import com.thierry.douban.util.CardLayout
-
 /**
  * Created by Thierry on 2017/7/9.
  */
