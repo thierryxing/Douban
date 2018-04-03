@@ -40,7 +40,7 @@ class FeedTargetActivity : BaseActivity() {
     fun addKVO() {
         viewModel.fetchDataResult.addOnPropertyChangedCallback(object : Observable.OnPropertyChangedCallback() {
             override fun onPropertyChanged(sender: Observable, propertyId: Int) {
-                this@FeedTargetActivity.observeHandler(viewModel.fetchDataResult.get())
+                this@FeedTargetActivity.observeHandler(viewModel.fetchDataResult.get()!!)
             }
         })
     }

@@ -28,7 +28,7 @@
             android:id="@+id/line"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_above="@id/mTabLayout"
+            android:layout_above="@+id/mTabLayout"
             android:background="@color/colorLineGray"/>
 
         <android.support.design.widget.TabLayout

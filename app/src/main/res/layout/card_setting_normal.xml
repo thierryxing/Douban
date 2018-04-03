@@ -46,7 +46,7 @@
                 android:layout_alignWithParentIfMissing="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="6dp"
-                android:layout_toLeftOf="@id/settingArrow"
+                android:layout_toLeftOf="@+id/settingArrow"
                 android:text="@{viewModel.subTitleText}"
                 android:textColor="@color/colorFontGray"
                 android:textSize="@dimen/text_size_small"/>

@@ -8,25 +8,23 @@ android {
         enabled true
     }
 
-    compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.thierry.douban"
         minSdkVersion 21
-        targetSdkVersion 25
+        targetSdkVersion 27
         versionCode 109
         versionName "5.6.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
-        debug {
-            minifyEnabled false
-        }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -66,9 +64,6 @@ dependencies {
     // Douban Rexxar
     implementation "com.douban.rexxar:core:0.4.6"
 
-    // DataBinding
-    kapt 'com.android.databinding:compiler:2.3.0'
-
     // ButterKnife(For Rexxar)
     implementation 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
@@ -76,9 +71,5 @@ dependencies {
     // OKHttp3(For Rexxar)
     implementation 'com.squareup.okhttp3:okhttp:3.8.1'
 
-
-}
-
-kapt {
-    generateStubs true
+    kapt "com.android.databinding:compiler:$gradle_version"
 }

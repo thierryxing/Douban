@@ -29,7 +29,7 @@
                 android:id="@+id/actionBarLeftBtn"
                 style="@style/ActionBarBtnL"
                 android:layout_marginEnd="18dp"
-                android:layout_toStartOf="@id/actionBarRightBtn"
+                android:layout_toStartOf="@+id/actionBarRightBtn"
                 android:background="@drawable/ic_status_search_user"
                 android:visibility="gone"/>
 

@@ -39,7 +39,7 @@
             <RelativeLayout
                 android:id="@+id/actionBarDonateWrapper"
                 style="@style/ActionBarBtnWrapper"
-                android:layout_toStartOf="@id/actionBarLikeWrapper"
+                android:layout_toStartOf="@+id/actionBarLikeWrapper"
                 android:visibility="@{viewModel.donateWrapperVisible ? View.VISIBLE : View.GONE}">
 
                 <ImageButton
@@ -58,7 +58,7 @@
             <RelativeLayout
                 android:id="@+id/actionBarLikeWrapper"
                 style="@style/ActionBarBtnWrapper"
-                android:layout_toStartOf="@id/actionBarCommentWrapper"
+                android:layout_toStartOf="@+id/actionBarCommentWrapper"
                 android:visibility="@{viewModel.likeWrapperVisible ? View.VISIBLE : View.GONE}">
 
                 <ImageButton
@@ -77,7 +77,7 @@
             <RelativeLayout
                 android:id="@+id/actionBarCommentWrapper"
                 style="@style/ActionBarBtnWrapper"
-                android:layout_toStartOf="@id/actionBarShareBtn"
+                android:layout_toStartOf="@+id/actionBarShareBtn"
                 android:visibility="@{viewModel.commentWrapperVisible ? View.VISIBLE : View.GONE}">
 
                 <ImageButton

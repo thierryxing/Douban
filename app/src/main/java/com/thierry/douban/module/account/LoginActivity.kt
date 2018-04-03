@@ -58,7 +58,7 @@ class LoginActivity : BaseActivity(), View.OnFocusChangeListener, View.OnClickLi
     fun addKVO() {
         viewModel.fetchDataResult.addOnPropertyChangedCallback(object : Observable.OnPropertyChangedCallback() {
             override fun onPropertyChanged(sender: Observable, propertyId: Int) {
-                this@LoginActivity.observeHandler(viewModel.fetchDataResult.get())
+                this@LoginActivity.observeHandler(viewModel.fetchDataResult.get()!!)
             }
         })
     }

@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginEnd="4dp"
-            android:layout_toStartOf="@id/profileArrow"
+            android:layout_toStartOf="@+id/profileArrow"
             android:text="@string/my_home_page"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/text_size_small"/>

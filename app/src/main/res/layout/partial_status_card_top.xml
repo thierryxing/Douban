@@ -58,7 +58,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="16dp"
-            android:layout_toLeftOf="@id/statusMore"
+            android:layout_toLeftOf="@+id/statusMore"
             android:text="@{viewModel.createTimeText}"
             android:textColor="@color/colorFontGray"
             android:textSize="@dimen/text_size_tiny"/>

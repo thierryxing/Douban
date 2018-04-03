@@ -107,12 +107,12 @@ class TabActivity : BaseActivity(), TabLayout.OnTabSelectedListener {
         mBroadcastReceiver = AuthBroadcastReceiver(this)
         val intentFilter = IntentFilter()
         intentFilter.addAction(Constants.Broadcast.LoginExpired)
-        localBroadcastManager?.registerReceiver(mBroadcastReceiver, intentFilter)
+        localBroadcastManager?.registerReceiver(mBroadcastReceiver!!, intentFilter)
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        localBroadcastManager?.unregisterReceiver(mBroadcastReceiver)
+        localBroadcastManager?.unregisterReceiver(mBroadcastReceiver!!)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -122,7 +122,7 @@ class TabActivity : BaseActivity(), TabLayout.OnTabSelectedListener {
         }
     }
 
-    class AuthBroadcastReceiver(val activity: Activity) : BroadcastReceiver() {
+    class AuthBroadcastReceiver(private val activity: Activity) : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent?) {
             if (intent?.action == Constants.Broadcast.LoginExpired) {
                 val mIntent = Intent(context, LoginActivity::class.java)

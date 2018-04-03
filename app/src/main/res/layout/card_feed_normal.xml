@@ -64,9 +64,9 @@
                     style="@style/CardFeedTitle"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_alignTop="@id/feedImage"
+                    android:layout_alignTop="@+id/feedImage"
                     android:layout_marginEnd="20dp"
-                    android:layout_toStartOf="@id/feedImage"
+                    android:layout_toStartOf="@+id/feedImage"
                     android:text="@{viewModel.title()}"/>
 
                 <ImageView

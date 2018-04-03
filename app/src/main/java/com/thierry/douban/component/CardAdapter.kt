@@ -9,13 +9,12 @@ import com.thierry.douban.BR
 import com.thierry.douban.model.Card
 import com.thierry.douban.module.common.BaseViewModel
 import kotlinx.android.synthetic.main.partial_recycler_view.view.*
-import org.jetbrains.anko.sdk25.coroutines.onClick
 
 
 /**
  * Created by Thierry on 2017/7/1.
  */
-class CardAdapter(val viewModel: RecyclerViewModel, val itemClickCallback: RecyclerFragment.OnItemClickListener? = null) : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
+class CardAdapter(val viewModel: RecyclerViewModel, private val itemClickCallback: RecyclerFragment.OnItemClickListener? = null) : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
 
     val TAG = CardAdapter::class.java.canonicalName
 
@@ -35,18 +34,18 @@ class CardAdapter(val viewModel: RecyclerViewModel, val itemClickCallback: Recyc
     override fun getItemViewType(position: Int): Int
             = viewModel.cardList[position].layout
 
-    class CardViewHolder(val binding: ViewDataBinding) : RecyclerView.ViewHolder(binding.root) {
+    class CardViewHolder(private val binding: ViewDataBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(cardViewModel: BaseViewModel, card: Card, listener: RecyclerFragment.OnItemClickListener?) = with(itemView) {
             binding.setVariable(BR.viewModel, cardViewModel)
             binding.root.setOnClickListener { listener?.onItemClick(card) }
-            if (cardViewModel::class.java.superclass.equals(CardViewModel::class.java)) {
+            if (cardViewModel::class.java.superclass == CardViewModel::class.java) {
                 buildChildCardAdapter(cardViewModel as CardViewModel)
             }
             return@with
         }
 
-        fun buildChildCardAdapter(viewModel: CardViewModel) = with(itemView) {
+        private fun buildChildCardAdapter(viewModel: CardViewModel) = with(itemView) {
             viewModel.fetchData()
             partialRecyclerView.layoutManager = viewModel.getLayoutManager(context)
             partialRecyclerView.adapter = CardAdapter(viewModel)

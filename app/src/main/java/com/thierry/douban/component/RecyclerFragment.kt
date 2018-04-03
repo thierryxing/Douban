@@ -6,6 +6,7 @@ import android.databinding.DataBindingUtil
 import android.databinding.Observable
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +17,7 @@ import com.thierry.douban.module.common.BaseFragment
 import com.thierry.douban.util.FetchDataResult
 import kotlinx.android.synthetic.main.fragment_recycler.*
 import org.jetbrains.anko.toast
+import java.util.logging.Logger
 
 class RecyclerFragment : Fragment() {
 
@@ -23,6 +25,7 @@ class RecyclerFragment : Fragment() {
         val DISABLE_SWIPE_REFRESH = "disableSwipeRefresh"
         val DISABLE_LOADING_ANIMATION = "disableLoadingAnimation"
     }
+
     var viewModel: RecyclerViewModel? = null
 
     private val TAG = CardAdapter::class.java.canonicalName
@@ -68,7 +71,7 @@ class RecyclerFragment : Fragment() {
     }
 
     private fun initBinding(inflater: LayoutInflater?, container: ViewGroup?): View {
-        val mBinding: FragmentRecyclerBinding = DataBindingUtil.inflate<FragmentRecyclerBinding>(inflater, R.layout.fragment_recycler, container, false)
+        val mBinding: FragmentRecyclerBinding = DataBindingUtil.inflate<FragmentRecyclerBinding>(inflater!!, R.layout.fragment_recycler, container, false)
         val view = mBinding.root
         mBinding.viewModel = viewModel
         return view
@@ -88,14 +91,21 @@ class RecyclerFragment : Fragment() {
         })
     }
 
-    fun observeHandler(newValue: FetchDataResult) {
+    fun observeHandler(newValue: FetchDataResult?) {
         hideLoading()
-        if (newValue == FetchDataResult.Success) {
-            mRecyclerView?.adapter?.notifyDataSetChanged()
-        } else if (newValue == FetchDataResult.Failed) {
-            viewModel?.let {
-                if (!it.errorMessage.isEmpty()) {
-                    toast(it.errorMessage)
+        newValue?.let {
+            when (it) {
+                FetchDataResult.Failed -> {
+                    viewModel?.let {
+                        if (!it.errorMessage.isEmpty()) {
+                            toast(it.errorMessage)
+                        }
+                    }
+                }
+                FetchDataResult.Success -> {
+                    mRecyclerView?.adapter?.notifyDataSetChanged()
+                }
+                else -> {
                 }
             }
         }
