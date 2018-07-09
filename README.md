@@ -13,7 +13,7 @@
 * 采用 Databinding+MVVM 模式
 
 ## Kotlin版本及三方框架
-* Kotlin 已经升级到了 1.2.0 版本
+* Kotlin 已经升级到了 1.2.31 版本
 * 使用 [anko](https://github.com/Kotlin/anko) 框架简化 Android 开发
 * 使用 [Fuel](https://github.com/kittinunf/Fuel) 作为网络层框架
 * 使用 [Kotson](https://github.com/SalomonBrys/Kotson) 作为 json 解析框架
