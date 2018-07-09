@@ -1,22 +1,22 @@
 # Douban
-> 基于Kotlin的豆瓣Android App
+> 基于 Kotlin 的豆瓣 Android App
 
 ## 关于Douban
-15年初Kotlin出了Beta后，尝试使用Kotlin写了一个完整的应用，Sentry的Android客户端[Sentry-Horn](https://github.com/thierryxing/sentry-horn)。写完之后，感觉到了和在iOS平台中使用Swift一样的便捷。
+15年初 Kotlin 出了 Beta 后，尝试使用 Kotlin 写了一个完整的应用，Sentry 的Android 客户端 [Sentry-Horn](https://github.com/thierryxing/sentry-horn)。写完之后，感觉到了和在iOS平台中使用Swift一样的便捷。
 
-今年Kotlin成为Android官方语言及Android Studio3.0推出后，Kotlin有了更好的支持，时机已经成熟，于是开始在团队内部进行推广和培训，为了方便大家更好的理解Kotlin这门语言，边培训边带大家完成了一款高仿豆瓣App的应用（本人是豆瓣重度用户）
+今年 Kotlin 成为 Android 官方语言及 Android Studio3.0 推出后，Kotlin 有了更好的支持，时机已经成熟，于是开始在团队内部进行推广和培训，为了方便大家更好的理解 Kotlin 这门语言，边培训边带大家完成了一款高仿豆瓣App的应用（本人是豆瓣重度用户）
 
 ## 功能及开发模式
-* 包含登录，及5个一级页面，及二级内容详情页
-* 包含豆瓣Hybrid框架[Rexxar](https://github.com/douban/rexxar-android)的使用：一个通用的RexxarPartialFragment
-* 包含一个通用的RecycleView组件RecyclerFragment及通用Feed流适配器CardAdapter
-* 采用Databinding+MVVM模式
+* 包含登录，及 5 个一级页面，及二级内容详情页
+* 包含豆瓣 Hybrid 框架[Rexxar](https://github.com/douban/rexxar-android) 的使用：一个通用的 RexxarPartialFragment
+* 包含一个通用的 RecycleView 组件 RecyclerFragment 及通用 Feed 流适配器 CardAdapter
+* 采用 Databinding+MVVM 模式
 
 ## Kotlin版本及三方框架
-* Kotlin已经升级到了1.1.60版本，1.2.0版本正在适配过程中
-* 使用[anko](https://github.com/Kotlin/anko)框架简化Android开发
-* 使用[Fuel](https://github.com/kittinunf/Fuel)作为网络层框架
-* 使用[Kotson](https://github.com/SalomonBrys/Kotson)作为json解析框架
+* Kotlin 已经升级到了 1.2.0 版本
+* 使用 [anko](https://github.com/Kotlin/anko) 框架简化 Android 开发
+* 使用 [Fuel](https://github.com/kittinunf/Fuel) 作为网络层框架
+* 使用 [Kotson](https://github.com/SalomonBrys/Kotson) 作为 json 解析框架
 
 
 ## 项目结构

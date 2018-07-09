@@ -6,7 +6,6 @@ import android.databinding.DataBindingUtil
 import android.databinding.Observable
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,13 +16,12 @@ import com.thierry.douban.module.common.BaseFragment
 import com.thierry.douban.util.FetchDataResult
 import kotlinx.android.synthetic.main.fragment_recycler.*
 import org.jetbrains.anko.toast
-import java.util.logging.Logger
 
 class RecyclerFragment : Fragment() {
 
     companion object {
-        val DISABLE_SWIPE_REFRESH = "disableSwipeRefresh"
-        val DISABLE_LOADING_ANIMATION = "disableLoadingAnimation"
+        const val DISABLE_SWIPE_REFRESH = "disableSwipeRefresh"
+        const val DISABLE_LOADING_ANIMATION = "disableLoadingAnimation"
     }
 
     var viewModel: RecyclerViewModel? = null
@@ -47,7 +45,7 @@ class RecyclerFragment : Fragment() {
         return viewCache!!
     }
 
-    fun initParams() {
+    private fun initParams() {
         disableSwipeRefresh = arguments.getBoolean(DISABLE_SWIPE_REFRESH)
         disableLoadingAnimation = arguments.getBoolean(DISABLE_LOADING_ANIMATION)
         viewModel?.let { adapter = CardAdapter(it, mItemClickCallback) }

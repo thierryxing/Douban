@@ -98,7 +98,7 @@ class NetService private constructor() {
      * @param success
      * @param failed
      */
-    fun doRequest(url: String, method: HttpMethod, params: List<Pair<String, Any?>>?, success: SuccessCallback? = null, failed: FailedCallback? = null) {
+    private fun doRequest(url: String, method: HttpMethod, params: List<Pair<String, Any?>>?, success: SuccessCallback? = null, failed: FailedCallback? = null) {
         Log.d(TAG, url)
         doAsync {
             when (method) {
@@ -125,7 +125,7 @@ class NetService private constructor() {
     /**
      * 处理请求Response
      */
-    fun handleResponse(response: Response, result: Result<String, FuelError>, success: SuccessCallback? = null, failed: FailedCallback? = null) {
+    private fun handleResponse(response: Response, result: Result<String, FuelError>, success: SuccessCallback? = null, failed: FailedCallback? = null) {
         val statusCode = response.httpStatusCode
         var errorData = response.getErrorInfo()
         when (statusCode) {
@@ -134,7 +134,7 @@ class NetService private constructor() {
             HttpStatusCode.UnAccessible.code ->
                 failed?.invoke(HttpStatusCode.UnAccessible.message)
             HttpStatusCode.Unauthorized.code -> {
-                this.handleUnauthorized(errorData.first, failed)
+                this.handleUnauthorized(errorData, failed)
             }
             else -> failed?.invoke(errorData.second)
         }
@@ -143,10 +143,10 @@ class NetService private constructor() {
     /**
      * 处理请求Response 400的情况（登录过期或没有权限）
      */
-    fun handleUnauthorized(code: Int, failed: FailedCallback? = null) {
-        when (code) {
+    private fun handleUnauthorized(errorData: Pair<Int, String>, failed: FailedCallback? = null) {
+        when (errorData.first) {
             UnauthorizedCode.InvalidAccessToken.code -> {
-                val intent: Intent = Intent()
+                val intent = Intent()
                 intent.action = Constants.Broadcast.LoginExpired
                 localBroadcastManager?.sendBroadcast(intent)
                 failed?.invoke(UnauthorizedCode.InvalidAccessToken.message)
@@ -154,13 +154,14 @@ class NetService private constructor() {
             UnauthorizedCode.UsernamePasswordMismatch.code -> {
                 failed?.invoke(UnauthorizedCode.UsernamePasswordMismatch.message)
             }
+            else -> failed?.invoke(errorData.second)
         }
     }
 
     /**
      * 从Response中获取错误信息
      */
-    fun Response.getErrorInfo(): Pair<Int, String> {
+    private fun Response.getErrorInfo(): Pair<Int, String> {
         val data = JSONObject(String(data))
         val message: String = try {
             data.getString("localized_message")
